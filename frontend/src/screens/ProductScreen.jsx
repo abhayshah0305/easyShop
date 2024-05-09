@@ -7,8 +7,8 @@ import {
     ListGroupItem,
   } from 'react-bootstrap';
 import Rating from '../components/Rating';
-import { useState} from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 
 const ProductScreen = () => {
     const [product, setProduct] = useState({});
@@ -16,7 +16,7 @@ const ProductScreen = () => {
     
     useEffect(() => {
         const fetchProduct = async() => {
-            const {data} = await axios.get(`api/products/${productId}`);
+            const {data} = await axios.get(`/api/products/${productId}`);
             setProduct(data);
         }
         fetchProduct();
