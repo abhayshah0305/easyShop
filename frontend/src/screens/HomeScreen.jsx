@@ -12,7 +12,7 @@ const HomeScreen = () => {
       const { data } = await axios.get('/api/products');
       setProducts(data);
     };
-
+    
     fetchProducts();
   }, []); 
 
@@ -27,7 +27,7 @@ const HomeScreen = () => {
         ))}
     </Row>
     </>
-  )
-}
+  );
+};
 
 export default HomeScreen;
